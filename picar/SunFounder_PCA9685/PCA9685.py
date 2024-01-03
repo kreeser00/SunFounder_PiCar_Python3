@@ -13,6 +13,8 @@
 
 import smbus
 import math
+import time
+
 
 class PWM(object):
     """A PWM control class for PCA9685."""
