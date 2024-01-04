@@ -1,9 +1,9 @@
 import sys
-from PCF8591 import PCF8591 as PCF8591_Class
+from PCF8591 import PCF
 from front_wheels import test as fw_test
 from back_wheels import test as bw_test
-from SunFounder_PCA9685 import Servo
-from SunFounder_PCA9685 import PCA9685
+from SunFounder_PCA9685.Servo import Servo
+from SunFounder_PCA9685.PCA9685 import PWM
 
 
 def servo_install():
@@ -74,10 +74,10 @@ def usage():
     print("  rear-wheel-test            Test the rear wheel")
     quit()
 
-class ADC(PCF8591_Class):
+class ADC(PCF):
     pass
 
 def setup():
-    pwm=PCA9685.PWM(bus_number=1)
+    pwm=PWM(bus_number=1)
     pwm.setup()
     pwm.frequency = 60

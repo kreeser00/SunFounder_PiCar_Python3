@@ -14,7 +14,7 @@ import smbus
 import time
 
 
-class PCF8591(object):
+class PCF(object):
     """ Light_Follow Module class """
     AD_CHANNEL = [0x43, 0x42, 0x41, 0x40]
 
