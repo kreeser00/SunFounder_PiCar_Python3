@@ -1,9 +1,10 @@
 import sys
-import front_wheels
-import back_wheels
-from SunFounder_PCA9685 import Servo
 import PCF8591
+from front_wheels import test as fw_test
+from back_wheels import test as bw_test
+from SunFounder_PCA9685 import Servo
 from SunFounder_PCA9685 import PCA9685
+
 
 def servo_install():
     import time
@@ -52,13 +53,13 @@ def main():
                     print("chn must be integer")
                     usage()
                 if 0 <= chn <= 15 :
-                    front_wheels.test(chn)
+                    fw_test(chn)
                 else:
                     print('chn must be in 0~15, not "%s"' % chn)
                     usage()
-            front_wheels.test()
+            fw_test()
         elif sys.argv[1] == "rear-wheel-test":
-            back_wheels.test()
+            bw_test()
         else:
             print('Command error, "%s" is not in list' % sys.argv[1])
             usage()
