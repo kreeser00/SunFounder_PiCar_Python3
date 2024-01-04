@@ -12,7 +12,8 @@
 **********************************************************************
 """
 
-import PCA9685
+from PCA9685 import PWM
+
 
 class Servo(object):
 	"""Servo driver class"""
@@ -33,7 +34,7 @@ class Servo(object):
 		self.offset = offset
 		self.lock = lock
 
-		self.pwm = PCA9685.PWM(bus_number=bus_number, address=address)
+		self.pwm = PWM(bus_number=bus_number, address=address)
 		self.frequency = self._FREQUENCY
 		self.write(90)
 	

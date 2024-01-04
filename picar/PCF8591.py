@@ -54,7 +54,7 @@ class PCF8591(object):
         return 1
 
     def _get_pi_revision(self):
-        "Gets the version number of the Raspberry Pi board"
+        """Gets the version number of the Raspberry Pi board"""
         # Courtesy quick2wire-python-api
         # https://github.com/quick2wire/quick2wire-python-api
         # Updated revision info from: http://elinux.org/RPi_HardwareHistory#Board_Revision_History

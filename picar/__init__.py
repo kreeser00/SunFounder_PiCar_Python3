@@ -1,5 +1,5 @@
 import sys
-import PCF8591
+from PCF8591 import PCF8591 as PCF8591_Class
 from front_wheels import test as fw_test
 from back_wheels import test as bw_test
 from SunFounder_PCA9685 import Servo
@@ -74,7 +74,7 @@ def usage():
     print("  rear-wheel-test            Test the rear wheel")
     quit()
 
-class ADC(PCF8591.PCF8591):
+class ADC(PCF8591_Class):
     pass
 
 def setup():
